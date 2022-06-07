@@ -1,16 +1,17 @@
 import React from "react";
+import { formatToLocalTime } from "../services/weatherService";
 
-function Info() {
+function Info({ weather: { dt, timezone, name, country } }) {
   return (
     <div>
       <div className="flex items-center justify-center my-6">
-        <p className="text-white text-xl font-extralight">
-          Dinsdag, 31 Mei 2022 | Lokale tijd: 12:46 PM
+        <p className="text-white text-xl font-extralight capitalize">
+          {formatToLocalTime(dt, timezone)}
         </p>
       </div>
 
       <div className="flex items-center justify-center my-3">
-        <p className="text-white text-3xl font-medium">Berlijn, DE</p>
+        <p className="text-white text-3xl font-medium capitalize">{`${name}, ${country}`}</p>
       </div>
     </div>
   );

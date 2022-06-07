@@ -1,6 +1,6 @@
 import React from "react";
 
-function TopBar() {
+function TopBar({ setQuery }) {
   const cities = [
     {
       id: 1,
@@ -30,6 +30,7 @@ function TopBar() {
         <button
           key={city.id}
           className="text-white text-lg font-bold hover:text-gray-300"
+          onClick={() => setQuery({ q: city.title })}
         >
           {city.title}
         </button>
