@@ -10,7 +10,7 @@ function Inputs({ setQuery, units, setUnits }) {
   };
 
   const handleLocation = () => {
-    toast("Fetching user location...");
+    toast("Gebruikers locatie aan het ophalen...");
     if (navigator.geolocation) {
       navigator.geolocation.getCurrentPosition((position) => {
         let lat = position.coords.latitude;

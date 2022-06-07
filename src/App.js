@@ -15,7 +15,7 @@ function App() {
   const [weather, setWeather] = useState(null);
 
   useEffect(() => {
-    const message = query.q ? query.q : "current location";
+    const message = query.q ? query.q : "huidige locatie";
 
     const fetchWeather = async () => {
       await getFormattedWeatherData({ ...query, units }).then((data) => {
@@ -24,9 +24,9 @@ function App() {
     };
 
     toast.promise(fetchWeather(), {
-      loading: `Fetching weather for ${message}`,
+      loading: `Weerbericht aan het ophalen voor ${message}`,
       success: `Success!`,
-      error: `Failed to fetch...`,
+      error: `Er is iets fout gegaan...`,
     });
   }, [query, units]);
 
