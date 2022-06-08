@@ -1,7 +1,6 @@
 import { useEffect, useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 
-import "./App.css";
 import TopBar from "./components/TopBar";
 import Inputs from "./components/Inputs";
 import Info from "./components/Info";
