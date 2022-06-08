@@ -33,7 +33,7 @@ function Details({
         <p className="capitalize">{description}</p>
       </div>
 
-      <div className="flex flex-row items-center justify-between text-white py-3">
+      <div className="flex flex-col items-center justify-center text-white py-3">
         <div className="flex flex-row items-center">
           <img
             data-tip={description}
@@ -43,12 +43,12 @@ function Details({
             data-offset="{'top': -20}"
             src={getIconURL(icon)}
             alt={description}
-            className="w-20"
+            className="w-35"
           />
           <ReactTooltip id="tooltip" />
-          <p className="text-5xl">{`${temp.toFixed()}°`}</p>
+          <p className="text-7xl font-bold">{`${temp.toFixed()}°`}</p>
         </div>
-        <div className="flex flex-col space-y-2">
+        <div className="flex flex-col items-center space-y-2">
           <div className="flex font-light text-sm items-center ">
             <UilTemperature size={18} className="mr-1" />
             Gevoels temperatuur:

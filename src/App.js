@@ -31,16 +31,16 @@ function App() {
   }, [query, units]);
 
   const background = () => {
-    if (!weather) return "from-cyan-500 to-blue-700";
+    if (!weather) return "from-cyan-600 to-blue-700";
     const threshold = units === "metric" ? 20 : 60;
-    if (weather.temp <= threshold) return "from-cyan-500 to-blue-700";
+    if (weather.temp <= threshold) return "from-cyan-600 to-blue-700";
 
-    return "from-yellow-500 to-red-700";
+    return "from-yellow-600 to-red-700";
   };
 
   return (
     <div
-      className={`mx-auto max-w-screen-md mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-800 rounded-lg ${background()}`}
+      className={`mx-auto max-w-screen-lg mt-4 py-5 px-32 bg-gradient-to-br  h-fit shadow-xl shadow-gray-800 rounded-lg ${background()}`}
     >
       <Toaster
         position="bottom-center"
